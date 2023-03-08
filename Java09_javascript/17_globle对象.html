@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 编码操作 encodeURI():url编码
+        var str = "当升科技";
+        var encode = encodeURI(str);
+        document.write(encode + "<br>"); //%E5%BD%93%E5%8D%87%E7%A7%91%E6%8A%80
+
+        // 解码操作 decodeURI():url解码
+        var  s = decodeURI(encode);
+        document.write(s + "<br>"); // 当升科技
+
+         // 编码操作2   encodeURIComponent():url编码
+         var str1 = "当升科技";
+        var encode1 = encodeURIComponent(str); // 该方法编码的内容更多
+        document.write(encode1 + "<br>"); //%E5%BD%93%E5%8D%87%E7%A7%91%E6%8A%80
+
+        // 解码操作2 decodeURIComponent():url解码
+        var  s1 = decodeURIComponent(encode);
+        document.write(s1 + "<br>"); // 当升科技
+        document.write("<hr>");
+
+        // 方法2:parseInt(); 逐一判断每个字符是否是数字，直到不是数字为止，将前面的数字部分转换为number
+         var str2 = "123";
+         var number1 = parseInt(str2); // 只转化字符串中的数字字符
+         document.write(number1 + 1 + "<br>")
+
+         var str3 = "234abc"; 
+         var number2 = parseInt(str3);  // 仍然转成数字 234
+         document.write(number2 + 1 + "<br>")
+
+         var str4 = "abc"; 
+         var number3= parseInt(str4);  // 仍然转成数字 234
+         document.write(number3 + 1 + "<br>")  // NaN
+
+        /* 方法三： isNaN() 判断一个值是否为NaN
+            NaN六亲不认：连自己都不认，凡是和NaN做比较的比如 "==" 都是false */
+            document.write("<hr>");
+            var a  = NaN;
+            document.write(a == NaN + "<br>"); //false
+            document.write("<hr>");
+            document.write(isNaN(a) + "<br>"); //true
+
+            /* 方法3： eval():将 JavaScript 字符串，并把它作为脚本代码来执行。 */
+            var jscode = "alert(122)";
+            document.write(jscode + "<br>");
+            eval(jscode);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: red 1px solid;
+        }
+
+        #div1{
+            color: green;
+            width: 200px;
+            height: 200px;
+        }
+        #div2{
+            color: bisque;
+            width: 100px;
+            height: 100px;
+        }
+
+        #div3{
+            color: coral;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">
+        小子
+    </div>
+    老子
+</div>
+<a href="javascript:void(0)" id="del">删除字节点</a>
+<a href="javascript:void(0)" id="add">增加字节点</a>
+<script>
+    document.getElementById("del").onclick = function (){
+        var id1= document.getElementById("div1");
+        var id2 = document.getElementById("div2");
+
+        id1.removeChild(id2);
+    }
+
+    document.getElementById("add").onclick = function (){
+        var div1= document.getElementById("div1");
+        var div3 = document.createElement("div");
+        div3.setAttribute("id","div3");
+        div1.appendChild(div3);
+    }
+
+    var parentNode = document.getElementById("div2").parentNode;
+    alert(parentNode)
+</script>
+</body>
+</html>

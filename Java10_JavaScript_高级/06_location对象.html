@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="fresh" type="button" value="刷新">
+
+    <input id="go" type="button" value="链接">
+    <script>
+
+        // 设置按钮 绑定 单击刷新页面事件 
+        var button = document.getElementById("fresh");
+        button.onclick = function () {
+            location.reload(); // 方法调用后面是有括号的
+        }
+
+        //href 没有（）
+        document.write("<br>");
+        // 设置按钮 绑定 单击获取页面URL
+        var goto = document.getElementById("go");
+        goto.onclick = function () {
+            var href = location.href;
+            alert(href);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style>
+        div {
+            /* 只要存在div标签的 都有边框 */
+            border: 2px solid red;
+
+        }
+
+        .div1 {
+            width: 100px;
+            height: 100px;
+            /* 外边距 */
+            /* margin: 50px;*/
+        }
+
+        .div2 {
+            width: 200px;
+            height: 200px;
+            /* 内边距 */
+            /* padding-left: 100px;
+            padding-top: 100px; */
+            /* 设置盒子的内边距导致外部的边框尺寸改变，不符合要求，因此要设置外部边框的大小为最终大小，即
+            不发生改变。 */
+            box-sizing: border-box;
+            padding: 50px;
+        }
+
+        .div3 {
+            float: left;
+            width: 50px;
+            height: 50px;
+        }
+
+        .div4 {
+            /*页面的最右边*/
+            float: right;
+        }
+
+        .div5 {
+            /*页面的最右边，因为页面的最右边被div4占着，因此div5紧靠着div4*/
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div2">这里是div2
+        <div class="div1"> 这里是div1</div>
+    </div>
+
+    <div class="div3">我是div3</div>
+    <div class="div4">我是div4</div>
+    <div class="div5">我是div5</div>
+</body>
+
+</html>

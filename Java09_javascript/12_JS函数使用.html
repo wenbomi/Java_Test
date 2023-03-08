@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数调用</title>
+
+    <script>
+        // 1. 创建函数 
+        // 特点: 形参不需要指定类型 返回值类型也不写
+        function f1(a, b) {
+            document.write(a + b + "<br>");
+        }
+        // 2. 调用函数
+        f1(3, 5);
+
+        // 第二种创建方法的方式
+        //1. 定义函数
+        var fun2 = function (a, b) {
+            document.write(a + b + "<br>");
+        }
+        // 调用方式
+        fun2(2, 3);
+
+
+        // 方法是一个对象 ，当定义名称相同的方法，后面的会覆盖掉前面的方法
+        fun2 = function (a, b) {
+            document.write(a - b + "<br>");
+        }
+        fun2(3, 4);  // -1
+
+        // 特点3 在JS中 函数的调用只和函数的名称有关 和函数的参数无关(个数)
+        var fun3 = function (a, b, c) {
+            document.write((a + b + c) + "<br>");
+            // alert( a+ b + c); // 1
+        }
+        fun3(1,2,4);
+        fun3(1,2); // 即使定义时有三个形参，实际调用只给1个参数 也不报错 因为无法计算 因此结果为NAN
+
+        document.write("<hr>");
+        // 求任意多个数字之和 
+        // js函数特点 内置对象（数组） 用来存储传入参数
+        function add() {  
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+
+            }
+            return sum;
+        }
+        var sum = add(1, 2, 3);
+        document.write(sum + "<br>");
+
+
+        // 最基础的函数创建方式 但是不推荐
+        var fun4 = new Function("a", "b", "document.write(a + b)");
+        fun4(1, 2); // 3
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

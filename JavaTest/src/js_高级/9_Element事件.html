@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" id="btn" value="append">
+<input type="button" id="btn_1" value="delete">
+
+<a>点击我</a>
+<hr>
+<script>
+    var elementById = document.getElementById("btn");
+    elementById.onclick = function () {
+        var tagNameElement = document.getElementsByTagName("a")[0];
+        tagNameElement.setAttribute("href", "https://www.baidu.com")
+    }
+
+    document.getElementById("btn_1").onclick = function (){
+        document.getElementsByTagName("a")[0].removeAttribute("href");
+    }
+
+</script>
+</body>
+</html>

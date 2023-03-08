@@ -1,0 +1,16 @@
+<?xml_demo version="1.0" encoding="UTF-8" ?>
+<students>
+    <student number="dangsheng_0001">
+        <name id='1'>
+            <xing>xiao</xing>
+            <ming>mi</ming>
+        </name>
+        <age>18</age>
+        <sex>female</sex>
+    </student>
+    <student number="dangsheng_0002">
+        <name>jiangjiang</name>
+        <age>26</age>
+        <sex>male</sex>
+    </student>
+</students>

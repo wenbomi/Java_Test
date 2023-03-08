@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    function fun() {
+        $.post("ajaxServlet", {"username": "XIAOMI"}, function (data) {
+            alert(data)
+        });
+    }
+
+</script>
+<body>
+<input type="button" value="发送异步请求" onclick="fun();">
+<input type="text">
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 展示图片 -->
+    <img id="img" src="img/banner_1.jpg" alt="" width="100%"> 
+     
+    <input type="button" id = "back" value="退后">
+
+    <script>
+        var number = 1;
+
+        function fun() {
+            var img = document.getElementById("img");
+            number++;
+            if (number > 3) {
+                number = 1;
+            }
+            img.src = "img/banner_" + number + ".jpg"; // 通过标签修改图片
+        }
+
+        setInterval(fun, 3000); // 调用循环定时器 
+
+        // 获取按钮对象
+        var back = document.getElementById("back");
+        // 给按钮对象 绑定点击获取该窗口访问过的URL数量
+        back.onclick = function(){
+            
+            history.go(-1); // 后退一个历史记录
+        }
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一元运算符</title>
+
+    <script>
+        var a = 3;
+        var b = ++a;
+        document.write(b); // 4
+        document.write( "<br>");
+
+        var c = "abc";
+        var c1 = +c;
+        document.write(c1); // NaN
+        document.write( "<br>");
+
+        var d1 = '123';
+        var d2 = d1 ++ ;
+        document.write("<hr>"+ d1 +  "------"+typeof(d1) + "<br>"); // 124
+        document.write(d2) // 123 
+        document.write("<hr>");
+
+        var f1 = true;
+        var f2 = + true;
+        var f3 = false;
+        var f4 = + false;
+        document.write(f1 + "--------" + typeof(f1) + "<br>")
+        document.write(f2 + "--------" + typeof(f2) + "<br>")
+        document.write(f3 + "--------" + typeof(f3) + "<br>")
+        document.write(f4 + "--------" + typeof(f4) + "<br>")
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

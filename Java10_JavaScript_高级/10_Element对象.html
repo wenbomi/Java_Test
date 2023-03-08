@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element对象</title>
+</head>
+
+<body>
+    <!-- 设置属性按钮 -->
+    <input type="button" value="设置标签属性" id="btn_id">
+
+    <a>点我</a>
+
+    <!-- 删除属性按钮 -->
+    <input type="button" value="删除标签属性" id="btn_remove">
+
+
+
+    <script>
+        // 绑定单击设置属性事件
+        var element_btn = document.getElementById("btn_id");
+        element_btn.onclick = function () {
+            var element_a = document.getElementsByTagName("a")[0]; // 获取a标签对象
+            element_a.setAttribute("href", "https://www.baidu.com");
+        }
+
+        // 绑定点击删除属性事件
+        var element_btn2 = document.getElementById("btn_remove");
+        element_btn2.onclick = function () {
+            var element_remove = document.getElementsByTagName("a")[0];
+            element_remove.removeAttribute("href");
+        }
+    </script>
+</body>
+
+</html>

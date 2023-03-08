@@ -1,0 +1,51 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Java17_test:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Java17_test_jar</output-path>
+    <root id="root">
+      <element id="module-output" name="Java17_test" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/el-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/jasper.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/jsp-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/catalina.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/ecj-4.20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/jasper-el.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/jaspic-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-jni.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/catalina-ha.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/servlet-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-dbcp.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-jdbc.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-util.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/catalina-ant.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/catalina-ssi.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-coyote.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/websocket-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-i18n-cs.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-i18n-de.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-i18n-es.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-i18n-fr.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-i18n-ja.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-i18n-ko.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-i18n-ru.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/annotations-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/catalina-tribes.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-util-scan.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-websocket.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-i18n-pt-BR.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/tomcat-i18n-zh-CN.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="/Library/Tomcat/lib/catalina-storeconfig.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/druid-1.1.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-j-8.0.31.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/spring-jdbc-4.2.4.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/spring-core-4.2.4.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/c3p0-0.9.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/commons-logging-1.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/jstl-impl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/javax.servlet.jsp.jstl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/commons-beanutils-1.8.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/spring-tx-4.2.4.RELEASE.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/web/WEB-INF/lib/spring-beans-4.2.4.RELEASE.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

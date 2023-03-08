@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array对象使用</title>
+</head>
+
+<body>
+<script>
+    //    Array数组对象
+    /*         1.创建方式
+                    1. var arr = new Array(元素列表);
+                    2. var arr = new Array(默认长度);
+                    3. var arr = [元素列表];
+               2.方法
+                    1.join：根据指定的分隔符将字符串连接在一起
+                    2.push :动态的添加元素
+
+                3.
+                4.特点：
+                    1. 数组内部元素的类型可变
+                    2. 数组内部的长度可变
+                    */
+
+
+    // 1.创建对象
+    var arr = new Array(1, 2, 3);
+    var arr2 = new Array(4);
+    var arr3 = [1, 2, 3, 4, 5];
+
+    document.write(arr + "<br>");
+    document.write(arr2 + "<br>");
+    document.write(arr3 + "<br>");
+    document.write("<hr>");
+
+    var arr4 = [1, "abc", true];  // 数组元素的类型可变的。
+    document.write(arr4 + "<br>");
+    document.write(arr4[0] + "<br>");
+    document.write(arr4[1] + "<br>");
+    document.write(arr4[2] + "<br>");
+    document.write(arr4[3] + "<br>"); // 越界了 元素只有只有三个 显示undefined
+    document.write("<hr>");
+
+    arr4[10] = "haha";
+    document.write(arr4[10] + "<br>"); // haha
+    document.write(arr4.length + "<br>"); // 11
+    document.write(arr4[9] + "<br>");  // undefined
+    document.write("<hr>");
+
+    // join方法的使用  将数组中的元素按照指定的分隔符拼接为字符串
+    document.write(arr4.join("/") + "<br>");
+    document.write("<hr>");
+
+    // push()方法 向数组的末尾添加一个或更多元素，并返回新的长度
+    document.write(arr4.length + "<br>");
+    arr4.push("wocao");
+    document.write(arr4.join("-") + "<br>");
+    document.write(arr4.length + "<br>");
+    document.write(arr4[11] + "<br>");
+</script>
+
+</body>
+
+</html>

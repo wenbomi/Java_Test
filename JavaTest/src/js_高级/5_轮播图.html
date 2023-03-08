@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<img src="../img/banner_1.jpg" id="img" width="100%">
+<input type="button" value="back" id="button">
+<input type="button" value="刷新" id="fresh">
+<input type="button" value="获取页面连接" id="line">
+
+<script>
+    var number = 1;
+    document.getElementById("img");
+
+    function fun() {
+        var imgE = document.getElementById("img");
+        number++;
+        if (number > 3) {
+            number = 1;
+        }
+        imgE.src = "../img/banner_" + number + ".jpg"
+    }
+
+    window.setInterval(fun,3000);
+
+    var button = document.getElementById("button");
+    button.onclick = function (){
+        window.history.go(-1);
+    }
+    document.getElementById("fresh").onclick = function (){
+        location.reload();
+    }
+    document.getElementById("line").onclick = function (){
+        alert(location.href);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: tomcat-el-api
+Bundle-SymbolicName: org.apache.tomcat-el-api
+Bundle-Version: 9.0.69
+Export-Package: javax.el;version="3.0"
+Provide-Capability: osgi.contract;osgi.contract=JavaEL;version:List<Ve
+ rsion>="3.0,2.2,2.1";uses:="javax.el"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.servi
+ celoader.processor)(version>=1.0.0)(!(version>=2.0.0)))",osgi.service
+ loader;filter:="(osgi.serviceloader=javax.el.ExpressionFactory)";osgi
+ .serviceloader="javax.el.ExpressionFactory",osgi.ee;filter:="(&(osgi.
+ ee=JavaSE)(version=1.8))"
+X-Compile-Source-JDK: 8
+X-Compile-Target-JDK: 8
+
+Name: javax/el/
+Implementation-Title: javax.el
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 3.0.FR
+Specification-Title: Expression Language
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 3.0
+

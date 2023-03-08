@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // // 焦点事件 onblur：失去焦点
+        // document.getElementById("username").onblur = function(){
+        //     alert("失去了焦点");
+        // }
+
+        // 记载完成事件 onload：一张页面或一幅图像完成加载。
+        window.onload = function () {
+            /* 焦点事件 onblur：失去焦点
+            如果没有该事件 script内的操作是没法控制下面的输入框的，因为都是先加载script标签内容，然后才加载input内容
+            而加载完成事件则等到界面全部加载完成后再执行script内容，这时就可以控制输入框的变化了 */
+            // document.getElementById("username").onblur = function () {
+            //     alert("失去了焦点");
+            // }
+            // 鼠标事件 
+            // 1.onmouseover	鼠标移到某元素之上。
+            // document.getElementById("username").onmouseover = function(){
+            //     alert("小飞棍来咯～～");
+            // }
+            // 鼠标点击事件 onmousedown	鼠标按钮被按下。（鼠标上不管是左键还是右键以及滚轮按下都会触发）
+
+            // document.getElementById("username").onmousedown = function(){
+            //     alert("我一个大轻轻点下～～");
+            // }
+
+            // 获取鼠标的具体哪个按键 左键代号0 滚轮 代号1 右键2
+            // document.getElementById("username").onmousedown = function(name){
+            //     alert(name.button);
+            // }
+            // 键盘事件 获取按下键盘键位的标识
+            // document.getElementById("username").onkeydown = function(event){
+            //     // alert(event.keyCode);
+            //     // 常用的提交表单
+            //     if (event.keyCode == 13) {
+            //         alert("提交申请成功！"); // 回车的代号为13
+            //     }else{
+            //         alert(event.keyCode)
+            //     }
+            // }
+
+            // 1. onchange	域的内容被改变。
+            // document.getElementById("username").onchange = function(){
+            //     alert("改变了");
+            // }
+
+            // document.getElementById("city").onchange = function () {
+            //     alert("改变了");
+            // }
+
+            // 表单事件 onsubmit	确认按钮被点击
+            // document.getElementById("form").onsubmit = function(){
+            //     var flag = false;
+
+            //     return flag;
+            // }
+
+            function checkForm(){
+                return false;
+            }
+            // 焦点聚焦事件
+            // document.getElementById("test").onfocus = function(){
+            //     alert("射击我");
+            // }
+
+            
+
+        }
+
+    </script>
+</head>
+
+<body> 
+    <!-- 第一种绑定方式 -->
+    <!-- <form action="#" id="form"> --> 
+        <!-- 第二种绑定方式 -->
+        <form action="#"  id="form" onclick= "return checkForm();">
+        <input id="username" name ="username">
+        <select name="" id="city">
+            <option value="">--请选择--</option>
+            <option value="">北京</option>
+            <option value="">武汉</option>
+            <option value="">广州</option>
+        </select>
+        <input type="submit" value="提交">
+    </form>
+
+    <input type="text" id="test">
+</body>
+
+</html>

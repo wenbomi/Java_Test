@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH对象的使用</title>
+    <script>
+        // 1. math对象不用创建，直接使用
+        document.write(Math.PI + "<br>")
+        document.write(Math.random() + "<br>") // 取0～1之间的随机数 含头不含尾
+        document.write(Math.round(3.14) + "<br>") // 四舍五入 3
+        document.write(Math.ceil(3.14) + "<br>") // 向上取整 4
+        document.write(Math.floor(3.14) + "<br>") // 向下取整 3
+        document.write("<hr>");
+
+         /* 随机取1～100的随机正整数
+            1.取 [0～1) 之间的随机数  a = Math.random()
+            2. 乘以 100 -> [0,99.99)  a * 100
+            3. 向下取整 -> [0,99]
+            4. ➕ 1 -> [1,100]   
+         */
+
+         var num = (Math.floor((Math.random() * 100)) + 1);
+         document.write(num + "<br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

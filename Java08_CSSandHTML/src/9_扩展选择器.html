@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>扩展选择器</title>
+    <style>
+        /* div 下的 p 标签 */
+        div p {
+            color: red;
+        }
+
+        /* p 的父类标签 div */
+        div>p {
+            border: 1px solid;
+        }
+
+        input[type="text"] {
+            border: 5px solid;
+        }
+
+        /* 初始化状态 */
+        a:link {
+            color: gray;
+        }
+
+        /* 鼠标悬浮状态 */
+        a:hover {
+            color: orange;
+        }
+
+        /* 正在访问状态 */
+        a:active {
+            color: yellow;
+        }
+
+        /* 访问后的状态 */
+        a:visited {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div>
+        <p>当升科技</p>
+    </div>
+
+    <div>aaaaaaa</div>
+
+    <p>信息技术部</p>
+
+    text:<input type="text"><br>
+
+    <input type="password"><br>
+
+    <a href="https://www.xvideos.com/">你准备好了吗</a>
+</body>
+
+</html>

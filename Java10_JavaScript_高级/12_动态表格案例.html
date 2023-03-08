@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+
+    <style>
+        table{
+            border: 1px solid;
+            margin: auto;
+            width: 500px;
+        }
+
+        td,th{
+            text-align: center;
+            border: 1px solid;
+        }
+        div{
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div>
+    <input type="text" id="id" placeholder="请输入编号">
+    <input type="text" id="name"  placeholder="请输入姓名">
+    <input type="text" id="gender"  placeholder="请输入性别">
+    <input type="button" value="添加" id="btn_add">
+
+</div>
+
+
+    <table>
+        <caption>学生信息表</caption>
+        <tr>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>令狐冲</td>
+            <td>男</td>
+            <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>任我行</td>
+            <td>男</td>
+            <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>岳不群</td>
+            <td>?</td>
+            <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
+        </tr>
+
+
+    </table>
+
+    <script>
+        //1.为按钮对象添加单击添加功能
+        document.getElementById("btn_add").onclick = function(){
+            // 获取三个文本框内容
+            var id = document.getElementById("id").value;
+            var name = document.getElementById("name").value;
+            var gender = document.getElementById("gender").value;
+
+            // 创建td,并赋值给td的标签体
+            var id_td = document.createElement("td");
+            var text_id = document.createTextNode(id);
+            id_td.appendChild(text_id);
+
+            var name_td = document.createElement("td");
+            var text_name = document.createTextNode(name);
+            name_td.appendChild(text_name);
+
+            var gender_td = document.createElement("td");
+            var text_gender = document.createTextNode(gender);
+            gender_td.appendChild(text_gender);
+
+            // a标签的td
+            var a_td = document.createElement("td"); //td标签
+            var ele_a = document.createElement("a"); // a标签
+            ele_a.setAttribute("href","javascript:void()");  // 为a标签设置属性 href
+            ele_a.setAttribute("onclick","delTr(this)");  // 为a标签设置属性 href
+
+            var text_a = document.createTextNode("删除"); // 为a标签设置显示
+            ele_a.appendChild(text_a);  // 将“删除”文本添加到标签里
+            a_td.appendChild(ele_a);    // 将该a标签添加到表格格子里
+
+            // 创建tr 并将td添加到tr里去
+            var tr = document.createElement("tr");
+            tr.appendChild(id_td);
+            tr.appendChild(name_td);
+            tr.appendChild(gender_td);
+            tr.appendChild(a_td);
+
+            // 获取table
+            var table = document.getElementsByTagName("table")[0];
+            table.appendChild(tr);
+        }
+
+        // 删除方式
+        function delTr(obj){
+                var table = obj.parentNode.parentNode.parentNode; // td-dr-table
+                var tr = obj.parentNode.parentNode;
+                table.removeChild(tr);
+            }
+    </script>
+</body>
+</html>

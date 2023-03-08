@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 第一种方式绑定事件 不推荐 耦合度高 不利于维护 -->
+    <!-- <img src="img/off.gif" alt="" id="light" onclick="alert('点击我！')"> -->
+
+    <!-- 第二种绑定方式  -->
+    <img src="img/off.gif" alt="" id="light2" onclick="fun1();">
+
+    <img src="img/on.gif" alt="" id="light3">
+
+    <script>
+        function fun1(){
+            alert("我被点击了！");
+        }
+        
+        function fun2(){
+            alert("再点我试试？");
+        }
+
+
+        // 第三种方式
+        //1. 获取light对象
+        var light3 = document.getElementById("light3");
+        //2. 绑定事件
+        light3.onclick = fun2;
+    </script>
+</body>
+</html>

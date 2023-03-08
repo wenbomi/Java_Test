@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/jquery-migrate-1.0.0.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function () {
+            // 1.绑定单击事件
+            $("#btn").on("click", function () {
+                alert("AAAAAAA")
+            });
+
+            // 2.解除绑定事件
+            $("#btn2").click(function () {
+                // 解除
+                $("#btn").off("click");
+                // $("#btn").off(); // 若off()内不传递函数 ，就会将btn上的所有事件都解绑
+            })
+        })
+
+    </script>
+</head>
+<body>
+<input id="btn" type="button" value="使用on绑定点击事件">
+<input id="btn2" type="button" value="使用off解绑点击事件">
+</body>
+</html>

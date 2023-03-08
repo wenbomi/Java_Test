@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日期对象</title>
+
+    <script>
+        //1.创建对象
+        var date = new Date();
+        document.write(date + "<br>"); //Thu Nov 03 2022 21:01:35 GMT+0800 (中国标准时间)
+
+        // 获取符合本地时间显示的日期展示格式
+        document.write(date.toLocaleString() + "<br>"); //2022/11/3 21:01:41
+
+        // 获取时间戳 距离1970年-1月-1日的毫秒值
+        document.write(date.getTime() + "<br>"); //    1667480517915
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

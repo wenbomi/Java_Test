@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" id="forward" value="前一页">
+<a href="5_轮播图.html">轮播图</a>
+<input type="button" id="next" value="下一页">
+<input type="button" id="number" value="数量">
+
+
+<script>
+  var forword = document.getElementById("forward");
+  forword.onclick = function (){
+    history.go(-1);
+  }
+  var forword = document.getElementById("next");
+  forword.onclick = function (){
+    history.go(1);
+  }
+
+  var forword = document.getElementById("number");
+  forword.onclick = function (){
+    alert(history.length);
+  }
+
+
+
+</script>
+</body>
+</html>

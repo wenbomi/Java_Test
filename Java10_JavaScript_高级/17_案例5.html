@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表格全选</title>
+    <style>
+        table {
+            border: 1px solid;
+            width: 500px;
+            margin-left: 30%;
+        }
+
+        td,
+        th {
+            text-align: center;
+            border: 1px solid;
+        }
+
+        div {
+            margin-top: 10px;
+            margin-left: 30%;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .out {
+            background-color: white;
+        }
+
+        .over {
+            background-color: pink;
+        }
+    </style>
+    <script>
+        //1.为页面加载完后绑定事件
+        window.onload = function () {
+            // 给全选按钮绑定事件
+            document.getElementById("selectAll").onclick = function () {
+                // 全选
+                // 1.获取所有的checkbox
+                var cbs = document.getElementsByName("cb")
+                // 遍历
+                for (let i = 0; i < cbs.length; i++) {
+                    // 设置每个cb的状态为选中 checked
+                    cbs[i].checked = true;
+                }
+            }
+
+            // 给全不按钮绑定事件
+            document.getElementById("unSelectAll").onclick = function () {
+                // 全不选
+                // 1.获取所有的checkbox
+                var cbs = document.getElementsByName("cb")
+                // 遍历
+                for (let i = 0; i < cbs.length; i++) {
+                    // 设置每个cb的状态为选中 checked
+                    cbs[i].checked = false;
+                }
+            }
+
+            // 给反选按钮绑定事件
+            document.getElementById("selectRev").onclick = function () {
+                // 全不选
+                // 1.获取所有的checkbox
+                var cbs = document.getElementsByName("cb")
+                // 遍历
+                for (let i = 0; i < cbs.length; i++) {
+                    // 设置每个cb的状态为选中 checked
+                    cbs[i].checked = !cbs[i].checked;
+                }
+            }
+
+            // 设置第一个cb按钮的功能
+            document.getElementById("firstcb").onclick = function () {
+                // 1.获取所有的checkbox
+                var cbs = document.getElementsByName("cb")
+                for (let i = 0; i < cbs.length; i++) {
+                    // 设置每个cb的状态和第一cb状态相同
+                    cbs[i].checked = this.checked;
+                }
+            }
+
+            // 给所有tr元素绑定鼠标移到元素之上和移出元素之上事件
+            var trs = document.getElementsByTagName("tr");
+            for (let i = 0; i < trs.length; i++) {
+                // 绑定鼠标移动之上事件
+                trs[i].onmouseover = function () {
+                    this.className = "over"
+                }
+                // 绑定鼠标移动之外事件
+                trs[i].onmouseout = function () {
+                    this.className = "out"
+                }
+            }
+
+            // 为添加按钮绑定单击添加功能
+            document.getElementById("btn_add").onclick = function () {
+
+                var id = document.getElementById("id").value;
+                var name = document.getElementById("name").value;
+                var gender = document.getElementById("gender").value;
+
+                // 获取表对象
+                var table = document.getElementsByTagName("table")[0];
+                // 在table里追加一行
+                table.innerHTML += '<tr>\n' +
+                    '<td><input type="checkbox" name="cb"></td>\n' +
+                    '<td>' + id + '</td>\n' +
+                    '<td>' + name + '</td>\n' +
+                    '<td>' + gender + '</td>\n' +
+                    '<td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>\n' +
+                    '</tr>';
+            }
+            // 删除方式
+            function delTr(obj) {
+                var table = obj.parentNode.parentNode.parentNode;
+                var tr = obj.parentNode.parentNode;
+                table.removeChild(tr);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="">
+        <input type="text" id="id" placeholder="请输入编号">
+        <input type="text" id="name" placeholder="请输入姓名">
+        <input type="text" id="gender" placeholder="请输入性别">
+        <input type="button" value="添加" id="btn_add">
+    </div>
+
+    <table>
+        <!-- caption 定义表格标题 -->
+        <caption>学生信息表</caption>
+        <tr>
+            <th><input type="checkbox" name="cb" id="firstcb"></th>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" name="cb"></td>
+            <td>1</td>
+            <td>令狐冲</td>
+            <td>男</td>
+            <td><a href="javascript:void(0);">删除</a></td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" name="cb"></td>
+            <td>2</td>
+            <td>任我行</td>
+            <td>男</td>
+            <td><a href="javascript:void(0);">删除</a></td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" name="cb"></td>
+            <td>3</td>
+            <td>岳不群</td>
+            <td>?</td>
+            <td><a href="javascript:void(0);">删除</a></td>
+        </tr>
+
+    </table>
+
+    <div>
+        <input type="button" id="selectAll" value="全选">
+        <input type="button" id="unSelectAll" value="全不选">
+        <input type="button" id="selectRev" value="反选">
+    </div>
+</body>
+
+</html>

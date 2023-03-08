@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史记录对象个数获取</title>
+ 
+</head>
+<body>
+    <input type="button" id = "btn" value="点我">
+
+    <a href="05_轮播图案例.html"> 05页面</a>
+
+    <input type="button" id = "next" value="下一个">
+
+    <script>
+        // 获取按钮对象
+        var btn = document.getElementById("btn");
+
+        // 给按钮对象 绑定点击获取该窗口访问过的URL数量
+        btn.onclick = function(){
+            var urls = history.length;
+            alert(urls);
+        }
+
+        // 获取按钮对象
+        var forward = document.getElementById("next");
+        
+        // 按钮对象绑定前往下一个页面的单击事件
+        forward.onclick = function(){
+            // history.forward();
+            history.go(1); // 相当于forward方法  go(-1)相当于back方式
+        }
+    </script>
+</body>
+</html>

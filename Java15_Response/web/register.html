@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码更换</title>
+    <script !src="">
+        window.onload = function (){
+            //1. 获取图片对象 并绑定单击事件
+            let img = document.getElementById("check");
+            img.onclick = function (){
+                // 加时间戳
+                var time = new Date().getTime();
+                img.src = "/day15/responseDemo06?" + time
+            }
+        }
+    </script>
+</head>
+<body>
+    <img src="/day15/responseDemo06" id="check">
+    <a href="" id="change">
+      看不清楚，更换一张？
+    </a>
+</body>
+</html>

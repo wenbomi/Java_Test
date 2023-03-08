@@ -1,0 +1,16 @@
+<?xml_demo version='1.0' encoding='gbk' standalone = 'yes'?>
+<!--引入外部文件来修改样式 a.css-->
+<?xml_demo-stylesheet type='text/css' href='a.css' ?>
+<users>
+    <user id= '1'>
+        <name>zhangsan</name>
+        <age>23</age>
+        <gender>male</gender>
+    </user>
+
+    <user id= '2'>
+        <name>lisi</name>
+        <age>20</age>
+        <gender>female</gender>
+    </user>
+</users>

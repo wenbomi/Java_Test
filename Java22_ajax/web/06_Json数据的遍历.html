@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Json格式的语法</title>
+</head>
+<script>
+    //1.定义Json格式的基本语法
+    var person = {"name": "xiaomi", "gender": true, "age": 23};
+
+    //  获取person对象中的所有键和值
+    // for (var key in person) {
+    //     document.write(key + ":" + person[key] + "<br>")
+    // }
+
+    // 2.嵌套模式 {}-->[]
+    var person02 = {
+        "person": [
+            {"name": "Xiaomi", "gender": true, "age": 23},
+            {"name": "LiSi", "gender": true, "age": 23},
+            {"name": "Wangwu", "gender": true, "age": 23}
+        ]
+    };
+
+    for (var i = 0; i < person02.person.length; i++) {
+        for (var key in person02.person[i]){
+            document.write(key + ":" + person[key] + "<br>")
+        }
+    }
+
+
+    // 3.嵌套格式 {}-->[]
+    var ps = [
+        {"name": "Xiaomi", "gender": true, "age": 23},
+        {"name": "LiSi", "gender": true, "age": 23},
+        {"name": "Wangwu", "gender": true, "age": 23}
+    ];
+
+    // 获取PS中的键和值
+    // for (var i = 0; i < ps.length; i++) {
+    //     var p = ps[i];
+    //     for (var key in p) {
+    //         document.write(key + ":" + p[key] + "<br>")
+    //     }
+    // }
+
+</script>
+<body>
+
+</body>
+</html>

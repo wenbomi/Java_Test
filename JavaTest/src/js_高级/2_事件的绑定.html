@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title></head>
+<body>
+<img src="../img/off.gif" id="light1" onclick="func1()">
+<img src="../img/on.gif" id="light2" onclick="func2()">
+
+<script>
+    function func1(){
+        alert("AAAAA")
+    }
+    function  func2(){
+        alert("BBBB")
+    }
+
+    // 绑定点击的事件的第二种方式
+    var light2 = document.getElementById("light2");
+    light2.onclick = fun2;
+</script>
+</body>
+</html>

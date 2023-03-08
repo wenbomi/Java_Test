@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Java13_ceshi:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Java13_ceshi_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Java13_ceshi/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Java13_ceshi" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Json格式的语法</title>
+</head>
+<script>
+    //1.定义Json格式的基本语法
+    var person = {"name": "xiaomi", "gender": true, "age": 23};
+    // alert(person)
+    //1.1 获取name值
+    var name = person.name;
+
+    // 2.嵌套模式 {}-->[]
+    var person02 = {
+        "person": [
+            {"name": "Xiaomi", "gender": true, "age": 23},
+            {"name": "LiSi", "gender": true, "age":23},
+            {"name": "Wangwu", "gender": true, "age":23}
+        ]
+    };
+    // 获取 name 为wangwu的值
+    var name1 = person02.person[2].name;
+    alert(name1)
+
+    // 3.嵌套格式 {}-->[]
+    var ps = [                                         // 数组
+        {"name": "Xiaomi", "gender": true, "age": 23},
+        {"name": "LiSi", "gender": true, "age": 23},
+        {"name": "Wangwu", "gender": true, "age": 23}
+    ];
+
+    // 获取name 为lisi的值
+    var name2 = ps[1].name;
+    alert(name2);
+    // alert(ps)
+</script>
+<body>
+
+</body>
+</html>

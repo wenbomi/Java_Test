@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border: 1px solid;
+            width: 500px;
+            margin-left: 25%;
+        }
+
+        td, th {
+            text-align: center;
+            border: 1px solid;
+        }
+
+        div {
+            margin-top: 10px;
+            margin-left: 30%;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="">
+    <input type="text" id="id" placeholder="请输入编号">
+    <input type="text" id="name" placeholder="请输入姓名">
+    <input type="text" id="gender" placeholder="请输入性别">
+    <input type="button" value="添加" id="btn_add">
+</div>
+
+<table>
+    <!-- caption 定义表格标题 -->
+    <caption>学生信息表</caption>
+    <tr>
+        <th><input type="checkbox" name="cb" id="firstcb"></th>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>2</td>
+        <td>任我行</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
+    </tr>
+
+    <tr>
+        <td><input type="checkbox" name="cb"></td>
+        <td>3</td>
+        <td>岳不群</td>
+        <td>?</td>
+        <td><a href="javascript:void(0);" onclick="delTr(this);">删除</a></td>
+    </tr>
+
+</table>
+
+<div>
+    <input type="button" id="selectAll" value="全选">
+    <input type="button" id="unSelectAll" value="全不选">
+    <input type="button" id="selectRev" value="反选">
+</div>
+<script>
+    window.onload = function (){
+        // 给全选按钮绑定事件
+        document.getElementById("selectAll").onclick = function (){
+            // 获取所有的checkbox
+            var checkboxs = document.getElementsByName("cb");
+            for (let i = 0; i < checkboxs.length; i++) {
+                // 若点击selectALl 就将每个checkbox都选中
+                checkboxs[i].checked = true;
+            }
+        }
+
+        document.getElementById("unSelectAll").onclick = function (){
+            // 获取所有的checkbox
+            var checkboxs = document.getElementsByName("cb");
+            for (let i = 0; i < checkboxs.length; i++) {
+                // 若点击selectALl 就将每个checkbox都不选
+                checkboxs[i].checked = false;
+            }
+        }
+
+        document.getElementById("selectRev").onclick = function (){
+            var checkboxs = document.getElementsByName("cb");
+            for (let i = 0; i < checkboxs.length; i++) {
+                checkboxs[i].checked = !checkboxs[i].checked;
+            }
+        }
+
+        // 设置第一个cb按钮
+        document.getElementById("firstcb").onclick = function (){
+            var checkboxs = document.getElementsByName("cb");
+            for (let i = 0; i < checkboxs.length; i++) {
+                checkboxs[i].checked = this.checked;
+            }
+        }
+
+        // 为添加按钮绑定点击事件
+        document.getElementById("btn_add").onclick = function (){
+            var text_id = document.getElementById("id").value;
+            var text_name = document.getElementById("name").value;
+            var text_gender = document.getElementById("gender").value;
+
+            var table = document.getElementsByTagName("table")[0];
+
+            table.innerHTML += "<tr>\n" +
+                "<td><input type='checkbox' name='cb'></td>\n" +
+                "<td>"+text_id +"</td>\n" +
+                "<td>"+ text_name+"</td>\n" +
+                "<td>"+ text_gender +"</td>\n" +
+                "<td><a href='javascript:void(0);' onclick='delTr(this);'>删除</a></td>\n" +
+                "</tr>";
+        }
+    }
+
+    function delTr(obj){
+        var table = obj.parentNode.parentNode.parentNode;
+        var tr = obj.parentNode.parentNode;
+        table.removeChild(tr);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="light" src="img/off.gif" alt="">
+
+    <script>
+        // 1.获取图片对象
+        var light = document.getElementById("light");
+
+        //绑定事件
+        var flag = false; 
+        light.onclick = function fun(){ // 在light对象上绑定单击事件
+            if (flag) {
+                // 如果灯是亮的 则换成off图片
+                light.src = "img/off.gif";
+                flag = false;
+            }else{
+                // 如果灯是灭的 则换成on图片
+                light.src = "img/on.gif";
+                flag = true;
+            }
+        }
+    </script>
+</body>
+</html>

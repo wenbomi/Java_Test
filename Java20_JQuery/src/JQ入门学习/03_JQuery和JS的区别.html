@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery快速入门.html</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="div1">div1.....</div>
+<div id="div2">div2.....</div>
+
+<script>
+    //1.JS的方式获取名称为div的所有html元素对象
+    var divs = document.getElementsByTagName("div"); // 获取标签为div标签元素的集合
+    document.write("JS + ", divs.length) // 可以当作数组使用
+
+    // 需求设置：js方式实现 将divs中的所有标签体内容都变更为"AAA"
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].innerHTML = "AAA";
+        // $(divs[i]).html("CCC"); // js对象 转换成 jq对象
+    }
+    document.write("<br>");
+
+// -------------------------------------------------------------------------
+   // 2. 根据JQ的形式获取名称为div的所有html元素对象
+    var $divs = $("div");
+    document.writeln("JQ + ", $divs.length) // 也可以当作数组使用
+
+    // 需求设置：jq方式实现 将divs中的所有标签体内容都变更为"BBB"
+    $divs.html("BBB");
+    // document.write("<br>");
+    /**
+     * 1. JQ对象在操作时，更加的方便
+     * 2. JQ对象和JS对象方法不通用
+     * 3. 两者可以相互转换
+     *      * JQ --> JS  JQ对象[索引] 或者 JQ对象.get(索引) 采用数组的形式
+     *      * JS --> JQ  $(JS对象)
+     */
+
+    $divs[0].innerHTML = "DDD";
+    $divs.get(1).innerHTML = "EEE";
+
+</script>
+</body>
+</html>

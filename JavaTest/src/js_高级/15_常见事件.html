@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    #username{
+
+    }
+</style>
+</head>
+<body>
+<input type="text" id="username" placeholder="qing shu ru"></input>
+<script>
+    window.onload = function (){
+        // 失去焦点
+        // document.getElementById("username").onblur = function (){
+        //     alert("HHHHH")
+        // }
+
+
+        // document.getElementById("username").onmousedown = function (){
+        //     alert("DDDD")
+        // }
+        //
+        // document.getElementById("username").onmousedown = function (name){
+        //     alert(name.button)
+        // }
+        //
+        // document.getElementById("username").onkeydown = function (event){
+        //     alert(event.keyCode)
+        // }
+
+        document.getElementById("username").onchange = function (){
+            alert("change....")
+        }
+
+    }
+</script>
+</body>
+</html>

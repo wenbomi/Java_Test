@@ -1,0 +1,23 @@
+<?xml_demo version="1.0" encoding="UTF-8"?>
+<!--该方式不常用 属于内部引用 个人觉得耦合性较高 不利于维护 与引入外部约束相同效果-->
+<!DOCTYPE students[
+        <!ELEMENT students (student*) >
+        <!ELEMENT student (name,age,sex)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT age (#PCDATA)>
+        <!ELEMENT sex (#PCDATA)>
+        <!ATTLIST student number ID #REQUIRED>
+        ]>
+<students>
+    <student number="s001">
+        <name>xiaomi</name>
+        <age>27</age>
+        <sex>male</sex>
+    </student>
+
+    <student number="s002">
+        <name>xiaojiang</name>
+        <age>27</age>
+        <sex>female</sex>
+    </student>
+</students>

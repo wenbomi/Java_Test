@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑运算符</title>
+    <script>
+        /* 重点了解： 其他类型的数据转布尔类型
+        1.number: 0为false 非0 为true
+        2.string: 非空字符串为真 空字符串为假
+        3.null 和 undefined ： 都为假
+        4.对象： 所有对象都为真
+        */
+
+        var num = 4;
+        document.write(!num + "<br>")
+        document.write(!!num + "<br>")
+        document.write("<hr>")
+
+        var str = "abc"; //string: 非空字符串为真 空字符串为假
+        var str1 = NaN;
+        var str2 = "";
+        document.write(!str + "<br>")
+        document.write(!str1 + "<br>")
+        document.write(!str2 + "<br>")
+
+        document.write("<hr>") //null 和 undefined ： 都为假
+        var obj = null; 
+        var obj1 ;
+        document.write(!obj + "<br>")
+        document.write(!obj1 + "<br>")
+
+        document.write("<hr>")
+        var date1 = new Date() ;  //所有对象都为真
+        document.write(!date1 + "<br>")
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

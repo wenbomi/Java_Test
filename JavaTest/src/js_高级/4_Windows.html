@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var flag = window.confirm("您确定要退出吗");
+        // if (flag){
+        //   alert("welcome to next time")
+        // }else {
+        //   alert("Please see sonmthiing ")
+        // }
+
+        // var result = window.prompt("Please input something?");
+        // alert(result)
+
+    </script>
+</head>
+<body>
+<input id="openWindow" type="button" value="open">
+<input id="closeWindow" type="button" value="close">
+<input id="checkTime" type="button" value="check">
+
+<script>
+    var openWindows = document.getElementById("openWindow");
+    var newWindows;
+
+    openWindows.onclick = function () {
+        newWindows = window.open("https://www.baidu.com")
+    }
+
+    var closeWindow = document.getElementById("closeWindow");
+    closeWindow.onclick = function () {
+        newWindows.close();
+    }
+    var checkWindows = document.getElementById("checkTime");
+
+    function fun(){
+        alert("wocao")
+    }
+    // checkWindows.onclick =  window.setTimeout(fun,2000);
+
+
+
+
+</script>
+</body>
+</html>

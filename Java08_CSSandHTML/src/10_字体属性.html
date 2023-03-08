@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>字体属性</title>
+    <style>
+        p {
+            color: red;
+            /* 字体大小 */
+            font-size: 30px;
+            /* 字体位置 */
+            text-align: center;
+            /* 行高 */
+            line-height: 100px;
+
+            /*
+                边框：border
+            */
+            border: 1px solid red;
+            background-color: beige;
+
+            /*背景图片*/
+            background:url("img/login_bg.png")  center;
+        }
+
+        div {
+            /* 边框 */
+            border: 1px solid red;
+            /* 边框尺寸 */
+            width: 500px;
+            height: 200px;
+            /* 边框中 文本位置 */
+            text-align: center;
+            padding-top: 100px;
+
+            /* 确定边框最终的大小 不改变 */
+            box-sizing: border-box;
+            /*
+                边框内的背景 不重复 居中
+            */
+            background: url("img/logo.jpg") no-repeat center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>小米</p>
+    <div></div>
+</body>
+
+</html>
